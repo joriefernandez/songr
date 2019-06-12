@@ -55,4 +55,10 @@ public class HelloWorldTest {
     public void testReverseNull(){
         assertNull("Should reverse the word", test.reverse(null));
     }
+
+    // Test getHelloWorld
+    @Test
+    public void testGetHelloWorld(){
+        assertEquals("Should return hello world", "Hello, world!", test.getHelloWorld());
+    }
 }
