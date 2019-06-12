@@ -12,5 +12,5 @@ The application uses localhost:8080 with different routes:
 Clone the repo and go to the directory. On the terminal run `./gradlew bootRun`
 
 ## Source code
-[HelloWorldController](./src/main/java/com.fern.jorie.projectlab.songr/HelloWorldController.java)
-[HelloWorldTest](./src/test/java/com.fern.jorie.projectlab.songr/HelloWorldController.java)
+* [HelloWorldController](./src/main/java/com.fern.jorie.projectlab.songr/HelloWorldController.java)
+* [HelloWorldTest](./src/test/java/com.fern.jorie.projectlab.songr/HelloWorldController.java)
