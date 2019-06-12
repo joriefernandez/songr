@@ -9,7 +9,8 @@ The application uses localhost:8080 with different routes:
 * Example: `localhost:8080/reverse/This is sample`
 
 ## To run the application
-Clone the repo and go to the directory. On the terminal run `./gradlew bootRun`
+1. Clone the repo and go to the directory. On the terminal run `./gradlew bootRun`
+2. Open your web browser and go to localhost:8080
 
 ## Source code
 * [HelloWorldController](./src/main/java/com.fern.jorie.projectlab.songr/HelloWorldController.java)
