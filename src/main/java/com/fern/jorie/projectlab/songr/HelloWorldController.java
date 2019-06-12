@@ -33,7 +33,10 @@ public class HelloWorldController {
      */
     @GetMapping("/capitalize/{param}")
     public String capitalize(@PathVariable String param){
-        return param.toUpperCase();
+        if(param != null){
+            return param.toUpperCase();
+        }
+        return null;
     }
 
     /**
@@ -43,16 +46,19 @@ public class HelloWorldController {
      */
     @GetMapping("/reverse")
     public String reverse(@RequestParam String sentence){
-        //Split the sentence and store as a list
-        List<String> splitSentence = new ArrayList<>(Arrays.asList(sentence.split("\\s")));
-        //Reverse the lists
-        Collections.reverse(splitSentence);
-        //Join the whole sentence
-        StringBuilder result = new StringBuilder();
-        for(String str: splitSentence){
-            result.append(str);
-            result.append(" ");
+        if(sentence != null) {
+            //Split the sentence and store as a list
+            List<String> splitSentence = new ArrayList<>(Arrays.asList(sentence.split("\\s")));
+            //Reverse the lists
+            Collections.reverse(splitSentence);
+            //Join the whole sentence
+            StringBuilder result = new StringBuilder();
+            for (String str : splitSentence) {
+                result.append(str);
+                result.append(" ");
+            }
+            return result.toString().trim();
         }
-        return result.toString();
+        return null;
     }
 }
