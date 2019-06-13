@@ -5,6 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Album class that contains album info. Ensure to create getters and setters.
+ */
+
 @Entity
 public class Album {
     @Id
