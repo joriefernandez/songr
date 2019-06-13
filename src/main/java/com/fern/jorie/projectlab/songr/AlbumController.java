@@ -27,7 +27,7 @@ public class AlbumController {
     @PostMapping("/albums")
     public String albumSubmit(@ModelAttribute Album album){
         albumRepository.save(album);
-        return "allAlbums";
+        return "redirect:/albums";
 
     }
 }

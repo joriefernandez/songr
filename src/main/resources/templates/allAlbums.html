@@ -22,7 +22,7 @@
         by <span th:text="${album.artist}"></span>
         has <span th:text="${album.songCount}"></span> songs
         with runtime <span th:text="${album.length}"></span> seconds.
-        <image th:text="${album.imageUrl}"></image>
+        <div><img th:src="${album.imageUrl}" th:alt="${album.title}" height="100px" width="100px"></div>
     </li>
 </ul>
 
