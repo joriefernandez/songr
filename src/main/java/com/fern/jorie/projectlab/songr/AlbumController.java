@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * Album controller class to create or retrieve album info from database.
+ * Reference: https://spring.io/guides/gs/handling-form-submission/
  */
 @Controller
 public class AlbumController {
