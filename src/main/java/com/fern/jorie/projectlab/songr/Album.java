@@ -53,4 +53,30 @@ public class Album {
     public String getImageUrl() {
         return imageUrl;
     }
+
+    //Setters
+
+//   // public void setId(long id) {
+//        this.id = id;
+//    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public void setSongCount(int songCount) {
+        this.songCount = songCount;
+    }
+
+    public void setLength(long length) {
+        this.length = length;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }

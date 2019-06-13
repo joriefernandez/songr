@@ -5,14 +5,24 @@
     <title>Albums</title>
 </head>
 <body>
+<h1>Enter an album:</h1>
+<form action="#" th:action="@{/albums}" th:object="${album}" method="post">
+    <p>Album Title: <input type="text" th:field="*{title}" /></p>
+    <p>Artist: <input type="text" th:field="*{artist}" /></p>
+    <p>Song count: <input type="text" th:field="*{songCount}" /></p>
+    <p>Length in seconds: <input type="text" th:field="*{length}" /></p>
+    <p>Image url: <input type="text" th:field="*{imageUrl}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+</form>
 <h1>All Albums</h1>
 <ul>
     <li th:each="album : ${albums}">
         <span th:text="${album.title}"></span>
-        (by <span th:text="${album.artist}"></span>)
-        (has <span th:text="${album.songCount}"></span>)
-        (with runtime <span th:text="${album.length}">seconds.</span>)
-        (Album info cover <span th:text="${album.imageUrl}">seconds</span>)
+        by <span th:text="${album.artist}"></span>
+        has <span th:text="${album.songCount}"></span> songs
+        with runtime <span th:text="${album.length}"></span> seconds.
+        <image th:text="${album.imageUrl}"></image>
     </li>
 </ul>
 
