@@ -36,7 +36,7 @@ public class Album {
 
     //Getters
 
-
+    public long getId(){return id;}
     public String getTitle() {
         return title;
     }
@@ -56,6 +56,8 @@ public class Album {
     public String getImageUrl() {
         return imageUrl;
     }
+
+    public List<Song> getSongs(){ return songs;}
 
     //Setters
 

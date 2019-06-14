@@ -17,6 +17,9 @@ public class AlbumController {
     @Autowired
     AlbumRepository albumRepository;
 
+    @Autowired
+    SongRepository songRepository;
+
     // get albums and display using the allAlbums html page
     @GetMapping("/albums")
     public String getAllAlbums(Model m){
@@ -29,6 +32,18 @@ public class AlbumController {
         return "allAlbums";
 
     }
+
+    // get songs and display using the allAlbums html page
+    @GetMapping("/songs")
+    public String getAllSongs(Model m){
+
+        //Get all albums in the database and display
+        Iterable<Song> songs = songRepository.findAll();
+        m.addAttribute("songs", songs);
+        return "allSongs";
+
+    }
+
 
     // Add album to database and display to the /albums page
     @PostMapping("/albums")
