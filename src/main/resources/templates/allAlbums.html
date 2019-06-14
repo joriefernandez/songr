@@ -18,11 +18,13 @@
 <h1>All Albums</h1>
 <ul>
     <li th:each="album : ${albums}">
+        <a th:href="@{/albums/{id}(id=${album.getId()})}">
         <span th:text="${album.title}"></span>
         by <span th:text="${album.artist}"></span>
         has <span th:text="${album.songCount}"></span> songs
         with runtime <span th:text="${album.length}"></span> seconds.
         <div><img th:src="${album.imageUrl}" th:alt="${album.title}" height="100px" width="100px"></div>
+        </a>
     </li>
 </ul>
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Songs</title>
+</head>
+<body>
+
+<h1>All Songs</h1>
+<ul>
+    <li th:each="song : ${songs}">
+        <span th:text="${song.title}"></span>
+        has duration of  <span th:text="${song.seconds}"></span> seconds
+        and is on track <span th:text="${song.trackNumber}"></span>
+        of album <span th:text="${song.album.title}"></span>.
+
+    </li>
+</ul>
+
+</body>
+</html>
